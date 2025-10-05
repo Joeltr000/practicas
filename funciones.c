@@ -46,30 +46,35 @@ int longitudCadena(char * cadena){
 }
 
 void invertirArreglo(int *arr, int size) {
-    int *inicio = arr;           // Puntero al primer elemento
-    int *fin = arr + size - 1;   // Puntero al último elemento
+    int *inicio = arr;           
+    int *fin = arr + size - 1;   
     int temp;
     
-    // Intercambiamos elementos hasta que los punteros se crucen
+  
     while (inicio < fin) {
-        // Intercambiar los valores
+        
         temp = *inicio;
         *inicio = *fin;
         *fin = temp;
         
-        // Mover los punteros
+       
         inicio++;
         fin--;
     }
 }
 
-// Función para imprimir el arreglo
+
 void imprimirArreglo(int *arr, int size) {
     printf("Arreglo: ");
     for (int o = 0; o < size; o++) {
         printf("%d ", arr[o]);
     }
     printf("\n");
+}
+
+int cuentaPares (int *arr, int size){
+	
+	
 }
 
 
