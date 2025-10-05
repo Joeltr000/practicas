@@ -17,6 +17,17 @@ int main(){
 	
 	char texto[] = "Esta es una practica de la carrera de IIS";
     printf("Longitud: %d\n", longitudCadena(texto));
+    
+    int arreglo[] = {1, 2, 3, 4, 5};
+    int size = 5;
+    
+    printf("Antes:\n");
+    imprimirArreglo(arreglo, size);
+    
+    invertirArreglo(arreglo, size);
+    
+    printf("Despues:\n");
+    imprimirArreglo(arreglo, size);
     return 0;
 }
 
@@ -35,11 +46,28 @@ int longitudCadena(char * cadena){
 }
 
 void invertirArreglo (int *arr , int size){
-	
+	int *inicio = arr;           
+    int *fin = arr + size + 1;   
+    int temp;
+    
+   
+    while (inicio < fin) {
+        temp = *inicio;
+        *inicio = *fin;
+        *fin = temp;
+    
+        inicio+1;
+        fin-1;
+    }
 }
 
 void imprimirArreglo(int *arr, int size){
 	
+	printf("Arreglo: ");
+    for (int i = 0; i < size; i++) {
+    printf("%d ", arr[i]);
+    }
+    printf("\n");
 	
 }
 
