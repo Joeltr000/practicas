@@ -29,6 +29,13 @@ int main(){
     printf("Despues:\n");
     imprimirArreglo(arreglo, size);
     
+    int miMatriz[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int tamano = sizeof(miMatriz) / sizeof(miMatriz[0]); // Calcula el tamaño de la matriz
+    
+    int numPares = cuentaPares(miMatriz, tamano); // Llama a la función
+
+    printf("El número de elementos pares en la matriz es: %d\n", numPares); // Imprime el resultado
+    
     return 0;
 }
 
@@ -73,8 +80,17 @@ void imprimirArreglo(int *arr, int size) {
 }
 
 int cuentaPares (int *arr, int size){
-	
-	
+	    int contador = 0; // Inicializa el contador de números pares
+    int *puntero_fin = arr + size; // Puntero al final del array para el bucle
+
+    // Recorre la matriz usando aritmética de punteros
+    for (int *puntero_actual = arr; puntero_actual < puntero_fin; puntero_actual++) {
+        // Verifica si el elemento actual es par
+        if (*puntero_actual % 2 == 0) {
+            contador++; // Incrementa el contador si es par
+        }
+    }
+    return contador; // Devuelve el total de números pares encontrados
 }
 
 
