@@ -33,6 +33,9 @@ int longitudCadena(char * cadena){
 	return i;
 }
 
+void invertirArreglo (int *arr , int size){
+	
+}
 
 
 
