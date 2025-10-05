@@ -14,7 +14,8 @@ int main(){
 	swap(&x,&y);
 	printf("swap despues: x=%d, y=%d\n",x,y);
 	
-    
+	char texto[] = "Esta es una practica de la carrera de IIS";
+    printf("Longitud: %d\n", longitudCadena(texto));
     return 0;
 }
 
@@ -25,8 +26,11 @@ void swap(int *a, int *b){
 }
 
 int longitudCadena(char * cadena){
-  
-    return i;
+	int i;
+    
+	 for (i = 0; cadena[i] != '\0'; i++) {
+     }
+	return i;
 }
 
 
