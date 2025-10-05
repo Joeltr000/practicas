@@ -13,6 +13,9 @@ int main(){
 	printf("swap antes: x=%d, y=%d\n",x,y);
 	swap(&x,&y);
 	printf("swap despues: x=%d, y=%d\n",x,y);
+	
+    
+    return 0;
 }
 
 void swap(int *a, int *b){
@@ -20,4 +23,13 @@ void swap(int *a, int *b){
 	*a = *b;
 	*b = cb;
 }
+
+int longitudCadena(char * cadena){
+  
+    return i;
+}
+
+
+
+
 
