@@ -58,7 +58,7 @@ void main(){
                             scanf("%f", &calif);
                         }
                         
-                        calificaciones[total_calificaciones + i] = calif;
+                        *(calificaciones + total_calificaciones + i) = calif;
                     }
                     
                     
@@ -67,7 +67,7 @@ void main(){
                     
                     float suma = 0;
                     for(int i = 0; i < total_calificaciones; i++) {
-                        suma += calificaciones[i];
+                        suma += *(calificaciones + i);
                     }
                     float promedio = suma / total_calificaciones;
                     
@@ -109,4 +109,5 @@ void main(){
     }
 
 }
+
 
